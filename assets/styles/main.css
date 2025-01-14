@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root{
     --bg-color:#ffffff;
     --primary-color:#FFB568;
@@ -5,19 +10,18 @@
     --border-color:#F0F0F0;
     --text-color:#2E2E2E;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
+    font-family: "Poppins", serif;
+}
+body.theme{
     --bg-color:#1F1F1F;
     --primary-color:#EFBE8A;
     --button-color:#3D3D3D;
     --border-color:#333333;
     --text-color:#F2F2F2;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    font-family: "Montserrat", serif;
-    font-weight: var(--fw-regular);
 }
 .container {
     margin: auto;
