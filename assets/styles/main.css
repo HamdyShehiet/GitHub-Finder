@@ -25,6 +25,7 @@ html{
 body{
     font-family: "Poppins", serif;
     font-weight: var(--fw-400);
+    background-color: var(--bg-color);
 }
 body.theme{
     --bg-color:#1F1F1F;
@@ -60,7 +61,6 @@ header{
     top: 0;
     z-index: 10;
     padding: 25px 0;
-    background-color:var(--bg-color);
 }
 header .container{
     display: flex;
@@ -85,7 +85,6 @@ header .container .logo a{
 }
 .search{
     padding: 40px 0;
-    background-color: var(--bg-color);
 }
 .search .container .form{
     display: flex;
@@ -109,17 +108,15 @@ header .container .logo a{
     color: var(--input-color);
 }
 .search .container .form button{
-    padding: 10px 30px;
+    padding: 10px 25px;
     border-radius: 5px;
     background-color: var(--button-color);
     color:var(--bg-color) ;
     cursor: pointer;
 }
-.data-list {
-    background-color: var(--bg-color);
-}
 .data-list .container .user-details p.message{
     text-align: center;
+    margin-bottom: 20px;
     color: rgb(5, 116, 5);
 }
 .data-list .container .user-details .user-data{
@@ -128,7 +125,7 @@ header .container .logo a{
     align-items: center;
     flex-wrap: wrap;
     gap:40px 220px;
-    padding: 20px 0;
+    padding: 20px 30px;
     border: 1px solid var(--border-color);
 }
 .data-list .container .user-details .user-data .user-image{
@@ -138,8 +135,8 @@ header .container .logo a{
     gap: 20px;
 }
 .data-list .container .user-details .user-data img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
 }
 .data-list .container .user-details .user-data h1{
@@ -153,6 +150,10 @@ header .container .logo a{
     gap: 18px;
     color: var(--text-color);
 }
+.data-list .container .user-details .user-info>*:not(.show-profile){
+    max-width: 300px;
+    width: 100%;
+}
 .data-list .container .user-details .user-info .title{
     display: block;
     margin-bottom: 5px;
@@ -164,7 +165,7 @@ header .container .logo a{
     font-weight: var(--fw-400);
 }
 .data-list .container .user-details .user-info .show-profile{
-    padding: 10px 30px;
+    padding: 10px 25px;
     border-radius: 5px;
     background-color: var(--button-color);
     color:var(--bg-color) ;
@@ -176,13 +177,22 @@ header .container .logo a{
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 20px 30px;
+    margin: 20px 0;
     border: 1px solid var(--border-color);
 }
 .data-list .container .user-details .profile-details span{
-    padding: 10px 30px;
+    padding: 10px 25px;
     border-radius: 5px;
     background-color: var(--button-color);
     color:var(--bg-color) ;
+}
+.data-list .container .user-details .repos-data ul li a{
+    display: block;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    font-size: var(--fs-16px);
+    font-weight: var(--fw-600);
+    color: var(--text-color);
 }

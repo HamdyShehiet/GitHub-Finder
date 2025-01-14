@@ -1,5 +1,5 @@
 let toggleTheme = document.getElementById("toggle-theme");
-toggleTheme.onclick=()=>{
+document.getElementById("toggle-theme").onclick=()=>{
     if(document.body.classList.contains("theme") != true){
         document.body.classList.add("theme");
         toggleTheme.src="assets/icons/sun.webp";
@@ -18,14 +18,13 @@ searchBtn.onclick=()=>{
 }
 
 function getData(){
-    let username =searchInput.value;
     let message = document.getElementById("message");
     let data ="";
     if(searchInput.value == ""){
         message.innerHTML = "Enter a Valid Username";
         message.style.color = "rgb(196, 34, 34)";
     }else{
-        fetch(`https://api.github.com/users/${username}`)
+        fetch(`https://api.github.com/users/${searchInput.value}`)
         .then(res=>res.json())
         .then((userData)=>{
             data = `
@@ -37,17 +36,17 @@ function getData(){
                     <div class="user-info">
                         <div class="location">
                         <span class="title">Location:</span>
-                        <span class="description">${userData.location}</span>
+                        <span class="description">${userData.location || "Not Founded"}</span>
                         </div>
                         <div class="bio">
                             <span class="title">Bio:</span>
-                            <p class="description">${userData.bio}</p>
+                            <p class="description">${userData.bio || "Not Founded"}</p>
                         </div>
                         <div class="username">
                             <span class="title">Username:</span>
                             <p class="description">${userData.login}</p>
                         </div>
-                        <a class="show-profile" href="${userData.html_url}" target="_blank" >Show Github Profile</a>
+                        <a class="show-profile" href="${userData.html_url}" target="_blank" >Github Profile</a>
                     </div>
                 </div>
                 <div class="profile-details">
