@@ -9,12 +9,18 @@
     --button-color:#2B2B2B;
     --border-color:#F0F0F0;
     --text-color:#2E2E2E;
+    --fs-24px:24px;
+    --fs-20px:20px;
+    --fs-16px:16px;
+    --fw-700:600;
+    --fw-400:400;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
     font-family: "Poppins", serif;
+    font-weight: var(--fw-400);
 }
 body.theme{
     --bg-color:#1F1F1F;
@@ -44,4 +50,29 @@ button{
 }
 img{
     max-width: 100%;
+}
+header{
+    position: sticky;
+    top: 0;
+    padding: 25px;
+    background-color:var(--bg-color);
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container  .toggle-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+header .container .logo a{
+    font-size: var(--fs-24px);
+    font-weight: var(--fw-700);
+    color: var(--primary-color);
 }
