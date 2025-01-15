@@ -192,7 +192,7 @@ header .container .logo a{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px 30px;
     margin-bottom: 10px;
     padding: 20px;
     border: 1px solid var(--border-color);
@@ -200,6 +200,9 @@ header .container .logo a{
     
 }
 .data-list .container .user-details .repos-data ul li span{
+    width: 70%;
+    flex-grow: 1;
+    word-wrap: break-word;
     font-size: var(--fs-20px);
     color: var(--text-color);
 }
