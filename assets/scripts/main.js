@@ -66,7 +66,7 @@ function getData(){
                     let reposOutput = "";
                     for(let i = 0 ; i<reposData.length ; i++ ){
                         reposOutput += `
-                        <li><span class="page-name">${reposData[i].name}</span><div class="links"><a href="${reposData[i].html_url}" target="_blank"  class="repo-code">Code</a><a href="${reposData[i].homepage}" target="_blank"  class="home-page">ddddd</a></div></li>
+                        <li><span class="page-name">${reposData[i].name}</span><div class="links"><a href="${reposData[i].html_url}" target="_blank"  class="repo-code">Code</a><a href="${reposData[i].homepage}" target="_blank"  class="home-page">Home Page</a></div></li>
                         `
                         document.getElementById("repos-data").innerHTML=reposOutput;
                     }
