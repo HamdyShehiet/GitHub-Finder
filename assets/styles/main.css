@@ -200,7 +200,7 @@ header .container .logo a{
     
 }
 .data-list .container .user-details .repos-data ul li span{
-    width: 70%;
+    width: 50%;
     flex-grow: 1;
     word-wrap: break-word;
     font-size: var(--fs-20px);
